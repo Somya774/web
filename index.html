@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrekZen</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .marquee {
+            background-color: #f0f0f0;
+            padding: 5px 0;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .marquee-content {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 20s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(-100%, 0); }
+        }
+
+        .title-bar {
+            background-color: #2d2a36;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .company-name {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-bar {
+            display: flex;
+        }
+
+        .nav-bar a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        .menu-icon {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .hero-image {
+            background-image: url('https://cdn.pixabay.com/photo/2020/04/22/12/06/adventure-5077760_1280.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 0 5%;
+        }
+
+        .hero-content {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 400px;
+        }
+
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .content-box {
+            background-color: #f7f7f7;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px 10px 20px 10px;
+            width: calc(45% - 40px);
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .content-box h2 {
+            color: #2f5288;
+            margin-bottom: 10px;
+        }
+
+        .content-box.image-box {
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .form-container {
+            background-image: url('https://www.justahotels.com/wp-content/uploads/2024/03/Manali-Travel-Guide.jpg');
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+            padding: 20px;
+            width: calc(45% - 40px);
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px 10px 20px 10px;
+        }
+
+        .form-content {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            width: 100%;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        form input, form textarea {
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+
+        form input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .title-bar {
+                flex-wrap: wrap;
+            }
+
+            .menu-icon {
+                display: block;
+            }
+
+            .nav-bar {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                text-align: center;
+                margin-top: 10px;
+            }
+
+            .nav-bar.active {
+                display: flex;
+            }
+
+            .nav-bar a {
+                margin: 5px 0;
+            }
+
+            .hero-image {
+                justify-content: center;
+                height: 50vh;
+            }
+
+            .hero-content {
+                max-width: 90%;
+            }
+
+            .content-box, .form-container {
+                width: 100%;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="marquee">
+        <div class="marquee-content">
+            Kashmir Lakes Trek &nbsp;&nbsp;&nbsp; TrekZen &nbsp;&nbsp;&nbsp;
+            Kashmir Lakes Trek &nbsp;&nbsp;&nbsp; TrekZen &nbsp;&nbsp;&nbsp;
+            Kashmir Lakes Trek &nbsp;&nbsp;&nbsp; TrekZen &nbsp;&nbsp;&nbsp;
+        </div>
+    </div>
+
+    <div class="title-bar">
+        <span class="company-name">TrekZen</span>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <div class="nav-bar">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+
+    <div class="hero-image">
+        <div class="hero-content">
+            <h2>TrekZen</h2>
+            <p>Embark on unforgettable journeys amidst majestic mountains and breathtaking landscapes. At TrekZen, we specialize in crafting immersive trekking experiences that awaken your sense of adventure and connect you with nature's awe-inspiring beauty.</p>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="content-box image-box" style="background-image: url('https://media1.thrillophilia.com/filestore/zgu7fgfjy5e275mfrwhw21sujkmz_shutterstock_2361426719.jpg');">
+            <h2>SPITI VALLEY</h2>
+            <p>Experience the historic allure of Spiti Valley with our guided trekking adventure. Traverse ancient paths amidst lush greenery to discover captivating ruins and panoramic views.</p>
+        </div>
+
+        <div class="content-box">
+            <h2>TrekZen Experience</h2>
+            <ol>
+                <li><a href="#">SPITI VALLEY TRIP pictures</a></li>
+                <li><a href="#">COORG TRIP pictures</a></li>
+                <li><a href="#">MANALI TRIP pictures</a></li>
+                <li><a href="#">HIMACHAL PRADESH TRIP pictures</a></li>
+            </ol>
+        </div>
+
+        <div class="content-box image-box" style="background-image: url('https://www.savaari.com/blog/wp-content/uploads/2021/11/Dubare-Elephant-Camp-coorg-85078-pixahive-1.jpg');">
+            <h2>COORG</h2>
+            <p>Discover the lush beauty of Coorg, known as the "Scotland of India". Experience coffee plantations, misty hills, and rich wildlife in this enchanting destination.</p>
+        </div>
+
+        <div class="form-container">
+            <div class="form-content">
+                <h2>Join Us</h2>
+                <form id="contact-form">
+                    <input type="text" id="name" name="name" placeholder="Name" required>
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                    <input type="tel" id="phone" name="phone" placeholder="Phone">
+                    <textarea id="message" name="message" placeholder="Message" required></textarea>
+                    <input type="submit" value="Send Message">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var navBar = document.querySelector('.nav-bar');
+            navBar.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
